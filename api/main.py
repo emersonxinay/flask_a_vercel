@@ -37,7 +37,7 @@ def jugar():
     else:
         resultado = '¡Perdiste!'
 
-    return render_template('cachipun.html', resultado=f'Elegiste {opcion_usuario}. La máquina eligió {opcion_maquina}. {resultado}')
+    return render_template('cachipun.html', resultado=f'{resultado}', opcion_usuario = f'{opcion_usuario}', opcion_maquina = f'{opcion_maquina}')
 
 if __name__ == "__main__":
   app.run(debug=True)

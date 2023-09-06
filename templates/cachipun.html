@@ -6,5 +6,8 @@
   <button type="submit" name="opcion" value="papel">Papel</button>
   <button type="submit" name="opcion" value="tijeras">Tijeras</button>
 </form>
-<p>{{ resultado }}</p>
+<h3>Jugada de la maquina: <strong class="text-success"> {{ opcion_maquina }} </strong> </h3>
+<h3>Jugada del humano: <strong class="text-primary"> {{opcion_usuario }}</strong> </h3>
+<h2>{{ resultado }}</h2>
+
 {% endblock %}
