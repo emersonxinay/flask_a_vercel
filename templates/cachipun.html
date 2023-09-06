@@ -1,13 +1,22 @@
-{% extends 'layout.html' %} {% block content %}
-<h1>Juego de Cachipún</h1>
-<p>Elige una opción:</p>
-<form method="POST" action="/jugar">
-  <button type="submit" name="opcion" value="piedra">Piedra</button>
-  <button type="submit" name="opcion" value="papel">Papel</button>
-  <button type="submit" name="opcion" value="tijeras">Tijeras</button>
-</form>
-<h3>Jugada de la maquina: <strong class="text-success"> {{ opcion_maquina }} </strong> </h3>
-<h3>Jugada del humano: <strong class="text-primary"> {{opcion_usuario }}</strong> </h3>
-<h2>{{ resultado }}</h2>
+{% extends 'layout.html' %}
 
+{% block content %}
+<div class="container text-center">
+  <h1>Juego de Cachipún</h1>
+  <p>Elige una opción:</p>
+  <form method="POST" action="/jugar">
+    <button type="submit" name="opcion" value="piedra" class="btn btn-success">
+      <i class="fas fa-hand-rock  fa-4x "></i> Piedra
+    </button>
+    <button type="submit" name="opcion" value="papel" class="btn btn-success">
+      <i class="fas fa-hand-paper fa-4x"></i> Papel
+    </button>
+    <button type="submit" name="opcion" value="tijeras" class="btn btn-success">
+      <i class="fas fa-hand-scissors fa-4x"></i> Tijeras
+    </button>
+  </form>
+  <h3>Jugada del humano: <strong class="text-primary">{{ opcion_usuario }}</strong></h3>
+  <h3>Jugada de la máquina: <strong class="text-success">{{ opcion_maquina }}</strong></h3>
+  <h2>{{ resultado }}</h2>
+</div>
 {% endblock %}

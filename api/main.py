@@ -1,9 +1,11 @@
 from flask import Flask, render_template, request
+import datetime
 app = Flask(__name__,  template_folder='../templates',  static_folder='../static')
 
 @app.route("/")
 def inicio():
-  return render_template('index.html')
+  year_actual = datetime.datetime.now().year
+  return render_template('cachipun.html', year_actual=year_actual)
 
 @app.route("/nosotros")
 def nosotros():
@@ -38,6 +40,7 @@ def jugar():
         resultado = '¡Perdiste!'
 
     return render_template('cachipun.html', resultado=f'{resultado}', opcion_usuario = f'{opcion_usuario}', opcion_maquina = f'{opcion_maquina}')
+
 
 if __name__ == "__main__":
   app.run(debug=True)

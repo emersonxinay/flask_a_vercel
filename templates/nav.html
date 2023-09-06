@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="{{ url_for('inicio') }}"></a>
+    <div
+      class="collapse navbar-collapse justify-content-between"
+      id="navbarNav"
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="navbar-brand" href="{{ url_for('inicio') }}">Mi APP</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('contacto') }}">Contáctanos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('cachipun') }}">Cachipún</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('inicio') }}">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('nosotros') }}">Nosotros</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

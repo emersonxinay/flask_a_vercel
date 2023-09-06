@@ -8,3 +8,13 @@ body {
 h2{
   color: red;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333; /* Cambia el color de fondo según tus preferencias */
+  color: rgb(17, 43, 240); /* Cambia el color de texto según tus preferencias */
+  padding: 10px;
+  text-align: center;
+}
