@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Primer Repo Con FLask</title>
+    <!-- conectar bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- conectando css -->
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <!-- cabecera de pagina  -->
+    <nav>
+      <h2>Mi APP</h2>
+      <ul>
+        <li><a href="{{url_for('inicio')}}">Inicio</a></li>
+        <li><a href="{{url_for('nosotros')}}">Nosotros</a></li>
+        <li><a href="{{url_for('contacto')}}">Contactanos</a></li>
+      </ul>
+    </nav>
+
+    <!-- cuerpo de la pagina  -->
+    <main>{% block content %}{% endblock %}</main>
+    <!-- pie de pagina  -->
+    <footer>
+      <p>&copy; {{ year }} Mi Sitio Web</p>
+    </footer>
+
+    <!-- conectando js de boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
